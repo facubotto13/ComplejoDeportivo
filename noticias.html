@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejo Valbé</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Logo del torneo">
+            </div>
+            <ul class="menu">
+                <li><a href="#torneo">Valbé</a></li>
+                <li class="has-submenu"><a href="#estadisticas">Estadísticas</a>
+                    <ul class="submenu">
+                        <li><a href="categoriaA.html" target="_blank">Categoría "A"</a></li>
+                        <li><a href="categoriaB.html" target="_blank">Categoría "B"</a></li>
+                    </ul>
+                </li>
+                <li><a href="noticias.html" target="_blank">Noticias</a></li>
+                <li><a href="#fotos">Fotos</a></li>
+                <li><a href="#reglamento">Reglamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="noticias-seccion" id="noticias">
+        <h2>Últimas Noticias</h2>
+        <div class="noticias-container">
+            <!-- Noticia 1 -->
+            <div class="noticia" onclick="openModal('modal1')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 1">
+                <h3>Título de la Noticia 1</h3>
+                <p>Resumen breve de la noticia 1...</p>
+            </div>
+
+            <!-- Noticia 2 -->
+            <div class="noticia" onclick="openModal('modal2')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 2">
+                <h3>Título de la Noticia 2</h3>
+                <p>Resumen breve de la noticia 2...</p>
+            </div>
+
+            <!-- Noticia 3 -->
+            <div class="noticia" onclick="openModal('modal3')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 3">
+                <h3>Título de la Noticia 3</h3>
+                <p>Resumen breve de la noticia 3...</p>
+            </div>
+
+            <!-- Noticia 4 -->
+            <div class="noticia" onclick="openModal('modal4')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 4">
+                <h3>Título de la Noticia 4</h3>
+                <p>Resumen breve de la noticia 4...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Título completo de la Noticia 1</h2>
+            <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 1">
+            <p>Contenido completo de la noticia 1...</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Título completo de la Noticia 2</h2>
+            <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 2">
+            <p>Contenido completo de la noticia 2...</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Título completo de la Noticia 3</h2>
+            <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 3">
+            <p>Contenido completo de la noticia 3...</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Título completo de la Noticia 4</h2>
+            <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 4">
+            <p>Contenido completo de la noticia 4...</p>
+        </div>
+    </div>
+
+    <footer class="footer container" id="contacto">
+        <h2>Nuestras redes</h2>
+        <div class="linkredes">
+            <a href="#" class="ig" target="_blank"> <img src="imagenes/instagram_white_28dp.png" alt=""></a> 
+            <a href="#" class="fb" target="_blank"> <img src="imagenes/facebook_white_28dp.png" alt=""></a> 
+            <a href="#" class="twt" target="_blank"> <img src="imagenes/twitter_white_28dp.png" alt=""></a> 
+        </div>
+
+        <div class="footer-txt">
+            <p>
+                <hr>
+                Copyright 2024 © - SolBot - Diseño y Desarrollo Web
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/54" class="btn-wsp" target="_blank">
+        <img src="imagenes/wpp.webp" alt="WhatsApp">
+    </a>
+
+    <script>
+
+        // Cambiar la clase del nav en base al scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+                nav.classList.remove('transparent');
+            } else {
+                nav.classList.add('transparent');
+                nav.classList.remove('scrolled');
+            }
+        });
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(function(modal) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
