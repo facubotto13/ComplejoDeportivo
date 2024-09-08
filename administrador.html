@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Complejo Valbé</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+
+    <!-- Sección de Login -->
+    <section class="login-section" id="loginSection">
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" placeholder="Ingrese su usuario" required>
+                
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+                
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Panel de Administración -->
+    <section class="admin-panel" id="adminPanel" style="display: none;">
+        <nav class="admin-nav">
+            <h2>Panel de Administración</h2>
+            <ul>
+                <li><a href="#" onclick="showSection('fixtureSection')">Gestionar Fixture</a></li>
+                <li><a href="#" onclick="showSection('photosSection')">Subir Fotos</a></li>
+                <li><a href="#" onclick="showSection('newsSection')">Gestionar Noticias</a></li>
+            </ul>
+            <button onclick="logout()">Cerrar Sesión</button>
+        </nav>
+
+        <div class="admin-content">
+            <!-- Sección de Fixture -->
+            <div id="fixtureSection" class="admin-section" style="display: none;">
+                <h3>Gestionar Fixture</h3>
+                <form id="fixtureForm">
+                    <label for="fixture-category">Categoría</label>
+                    <select id="fixture-category" required>
+                        <option value="" disabled selected>Selecciona una categoría</option>
+                        <option value="categoriaA">Categoría A</option>
+                        <option value="categoriaB">Categoría B</option>
+                        <!-- Agrega más categorías si es necesario -->
+                    </select>
+                    
+                    <label for="fixture-date">Fecha</label>
+                    <input type="date" id="fixture-date" required>
+
+                    <label for="fixture-time">Hora</label>
+                    <input type="time" id="fixture-time" required>
+
+                    <label for="fixture-teams">Equipo "A"</label>
+                    <select id="fixture-teams" required>
+                        <option value="" disabled selected>Selecciona un equipo</option>
+                        <option value="equipo1">Equipo 1</option>
+                        <option value="equipo2">Equipo 2</option>
+                        <option value="equipo3">Equipo 3</option>
+                        <!-- Agrega más equipos según sea necesario -->
+                    </select>
+
+                    <label for="fixture-teams-opponent">Equipo "B"</label>
+                    <select id="fixture-teams-opponent" required>
+                        <option value="" disabled selected>Selecciona el equipo contrario</option>
+                        <option value="equipo1">Equipo 1</option>
+                        <option value="equipo2">Equipo 2</option>
+                        <option value="equipo3">Equipo 3</option>
+                        <!-- Agrega más equipos según sea necesario -->
+                    </select>
+
+                    <label for="fixture-court">Cancha</label>
+                    <select id="fixture-court" required>
+                        <option value="" disabled selected>Selecciona una cancha</option>
+                        <option value="cancha1">Cancha 1</option>
+                        <option value="cancha2">Cancha 2</option>
+                        <option value="cancha3">Cancha 3</option>
+                        <!-- Agrega más canchas si es necesario -->
+                    </select>
+
+                    <button type="submit">Guardar Fixture</button>
+                </form>
+
+                <!-- Sección para mostrar partidos cargados -->
+                <div id="fixturesList" class="fixtures-list">
+                    <h4>Partidos Cargados</h4>
+                    <div id="categoriaASection" class="category-section">
+                        <h5>Categoría A</h5>
+                        <table class="fixturesTable">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Cancha</th>
+                                    <th>Equipo A</th>
+                                    <th>Equipo B</th>
+                                </tr>
+                            </thead>
+                            <tbody id="categoriaATableBody">
+                                <!-- Los partidos de Categoría A se agregarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="categoriaBSection" class="category-section">
+                        <h5>Categoría B</h5>
+                        <table class="fixturesTable">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Cancha</th>
+                                    <th>Equipo A</th>
+                                    <th>Equipo B</th>
+                                </tr>
+                            </thead>
+                            <tbody id="categoriaBTableBody">
+                                <!-- Los partidos de Categoría B se agregarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Sección de Fotos -->
+            <div id="photosSection" class="admin-section" style="display: none;">
+                <h3>Subir Fotos</h3>
+                <form enctype="multipart/form-data">
+                    <label for="photo-title">Título</label>
+                    <input type="text" id="photo-title" placeholder="Título de la colección" required>
+
+                    <label for="photo-date">Fecha</label>
+                    <input type="date" id="photo-date" required>
+
+                    <label for="photo-upload">Seleccionar Fotos</label>
+                    <input type="file" id="photo-upload" multiple required>
+
+                    <button type="submit">Subir Fotos</button>
+                </form>
+            </div>
+
+            <!-- Sección de Noticias -->
+            <div id="newsSection" class="admin-section" style="display: none;">
+                <h3>Gestionar Noticias</h3>
+                <form enctype="multipart/form-data">
+                    <label for="news-title">Título</label>
+                    <input type="text" id="news-title" placeholder="Título de la noticia" required>
+
+                    <label for="news-image">Foto</label>
+                    <input type="file" id="news-image" accept="image/*" required>
+
+                    <label for="news-summary">Resumen</label>
+                    <textarea id="news-summary" placeholder="Resumen de la noticia" rows="3" required></textarea>
+
+                    <label for="news-content">Noticia Completa</label>
+                    <textarea id="news-content" placeholder="Contenido de la noticia" rows="6" required></textarea>
+
+                    <button type="submit">Guardar Noticia</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // Simulación de Login
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Validación simple
+            if (username === "admin" && password === "1234") {
+                document.getElementById('loginSection').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'flex';
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+
+        // Mostrar sección
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.admin-section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Cerrar sesión
+        function logout() {
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('loginSection').style.display = 'flex';
+        }
+
+        document.getElementById('fixtureForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+
+    // Obtén los valores del formulario
+    const category = document.getElementById('fixture-category').value;
+    const date = document.getElementById('fixture-date').value;
+    const time = document.getElementById('fixture-time').value;
+    const teamA = document.getElementById('fixture-teams').value;
+    const teamB = document.getElementById('fixture-teams-opponent').value;
+    const court = document.getElementById('fixture-court').value;
+
+    // Selecciona la tabla correcta según la categoría
+    let tableBodyId;
+    if (category === 'categoriaA') {
+        tableBodyId = 'categoriaATableBody';
+    } else if (category === 'categoriaB') {
+        tableBodyId = 'categoriaBTableBody';
+    }
+
+    if (tableBodyId) {
+        // Crea una nueva fila para la tabla
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${date}</td>
+            <td>${time}</td>
+            <td>${court}</td>
+            <td>${teamA}</td>
+            <td>${teamB}</td>
+        `;
+
+        // Agrega la fila a la tabla correspondiente
+        document.getElementById(tableBodyId).appendChild(newRow);
+
+        // Limpia el formulario después de agregar el partido
+        this.reset();
+    }
+});
+
+    </script>
+
+</body>
+</html>
