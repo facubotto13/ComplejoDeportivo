@@ -197,8 +197,64 @@ nav.scrolled {
 }
 
 .fixture-lista {
-    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
+
+.fixture-lista h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.fixture-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.equipo-left, .equipo-right {
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+}
+
+.fixture-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+}
+
+.fecha-hora {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.cancha {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
 
 /* Estilos para modales */
 .modal {
