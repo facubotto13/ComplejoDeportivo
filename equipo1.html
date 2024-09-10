@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Jugadores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Ajustar el ancho de las columnas 2, 3 y 4 */
+th:nth-child(2), td:nth-child(2), /* Tarjetas Amarillas */
+th:nth-child(3), td:nth-child(3), /* Tarjetas Rojas */
+th:nth-child(4), td:nth-child(4)  /* Goles */ {
+    width: 50px; /* Puedes ajustar el valor según lo necesites */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tfoot {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.botonVolver {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .botonVolver:hover {
+            background-color: #0056b3;
+        }
+
+</style>
+<body>
+    <main>
+        <section id="estadisticas">
+            <h1>Estadísticas de Jugadores</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre y Apellido</th>
+                        <th><img src="imagenes/tarjeta-amarilla.png" alt="Tarjeta Amarilla" width="30px"></th>
+                        <th><img src="imagenes/rojo.png" alt="Tarjeta Roja" width="30px"></th>
+                        <th><img src="imagenes/futbol-americano.png" alt="Pelota de Fútbol" width="30px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>L. Brey</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Advincula</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>C. Lema</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>M. Rojo</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>L. Blanco</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>K. Zenon</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>C. Medina</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>G. Fernandez</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>A. Martegani</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>M. Gimenez</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>B. Aguirre</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <button class="botonVolver" onclick="window.location.href='equipos.html';">Volver a equipos</button>
+    </main>
+
+    <footer>
+        <p>&copy; </p>
+    </footer>
+</body>
+</html>

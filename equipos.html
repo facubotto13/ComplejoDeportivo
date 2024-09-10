@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos del Torneo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+.equipos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.equipo {
+    text-align: center;
+    margin: 20px;
+}
+
+.equipo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.equipo p {
+    margin-top: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Logo del torneo">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Torneo</a></li>
+                <li class="has-submenu"><a href="#estadisticas">Estadísticas</a>
+                    <ul class="submenu">
+                        <li><a href="categoriaA.html" target="_blank">Categoría "A"</a></li>
+                        <li><a href="categoriaB.html" target="_blank">Categoría "B"</a></li>
+                    </ul>
+                </li>
+                <li><a href="equipos.html">Equipos</a></li>
+                <li><a href="noticias.html" target="_blank">Noticias</a></li>
+                <li><a href="fotos.html" target="_blank">Fotos</a></li>
+                <li><a href="reglamento.html">Reglamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="equipos">
+            <h1>Equipos del Torneo</h1>
+            <div class="equipos-container">
+                <!-- Equipo 1 -->
+                <div class="equipo">
+                    <a href="equipo1.html">
+                        <img src="imagenes/boca.jpg" alt="Escudo del Equipo 1">
+                        <p>Boca Juniors</p>
+                    </a>
+                </div>
+                <!-- Equipo 2 -->
+                <div class="equipo">
+                    <a href="equipo2.html">
+                        <img src="imagenes/river.jpg" alt="Escudo del Equipo 2">
+                        <p>River Plate</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Añadir más equipos aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; </p>
+    </footer>
+</body>
+</html>
