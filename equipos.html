@@ -7,15 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-.equipos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+  position: relative;
+  height: 14vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.equipos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #e0e0e0; /* Fondo gris claro */
+}
+
+.titulo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    align-items: center;
+    justify-items: center; /* Centra el contenido dentro de las celdas */
+}
+
+.titulo h1 {
+    grid-column: span 4; /* Ocupa las 4 columnas, centrando el h1 */
+    text-align: center;
+    width: 100%; /* Asegura que el h1 ocupe el ancho total */
+}
+
 
 .equipo {
     text-align: center;
-    margin: 20px;
 }
 
 .equipo img {
@@ -28,6 +68,19 @@
     margin-top: 10px;
 }
 
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
 </style>
 <body>
     <header>
@@ -37,7 +90,7 @@
                 <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Logo del torneo">
             </div>
             <ul class="menu">
-                <li><a href="index.html">Torneo</a></li>
+                <li><a href="index.html">Valbé</a></li>
                 <li class="has-submenu"><a href="#estadisticas">Estadísticas</a>
                     <ul class="submenu">
                         <li><a href="categoriaA.html" target="_blank">Categoría "A"</a></li>
@@ -54,7 +107,9 @@
 
     <main>
         <section id="equipos">
+            <section class="titulo">
             <h1>Equipos del Torneo</h1>
+            </section>
             <div class="equipos-container">
                 <!-- Equipo 1 -->
                 <div class="equipo">
@@ -77,13 +132,75 @@
                         <p>Racing</p>
                     </a>
                 </div>
-                <!-- Añadir más equipos aquí -->
-            </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                <!-- Equipo 3 -->
+                <div class="equipo">
+                    <a href="equipo3.html">
+                        <img src="imagenes/racing.png" alt="Escudo del Equipo 3">
+                        <p>Racing</p>
+                    </a>
+                </div>
+                
         </section>
     </main>
 
     <footer>
-        <p>&copy; </p>
+        <p>&copy; 2024</p>
     </footer>
 </body>
 </html>
