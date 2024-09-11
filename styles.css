@@ -712,13 +712,19 @@ nav.scrolled {
     
 }
 
-.logo_principal {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente el contenido (opcional) */
-    align-items: center; /* Centrar verticalmente el contenido (opcional) */
+.logo_p {
+    max-width: none;          /* Mantiene el tamaño original de la imagen */
+    height: auto;             /* Mantiene la proporción de la imagen */    
 }
 
-
+.logo_principal {
+    display: flex;
+    justify-content: center;  /* Centra la imagen dentro del contenedor */
+    align-items: center;      /* Centra verticalmente la imagen */
+    width: 50vw;              /* Ocupa el 50% del ancho de la pantalla */
+    height: 100vh;            /* Ocupa el 100% del alto de la pantalla */
+    box-sizing: border-box;    /* Asegura que padding y border no afecten el tamaño total */
+}
 
 .fixture h2 {
     text-align: center; /* Centrar el título */
@@ -754,5 +760,11 @@ nav.scrolled {
     margin: 0; /* Quitar márgenes de los párrafos */
 }
 
+hr {
+    width: 90%; /* Ocupa el 90% del ancho */
+    margin: 0 auto; /* Centra la línea horizontal */
+    border: 1px solid #000; /* Define el color y grosor de la línea */
+    display: block; /* Asegura que el hr se comporte como un bloque */
+}
 
 

@@ -16,17 +16,17 @@
 
     .fixture {
     margin-top: 30px;
-    width: 59%; /* Ajusta el ancho al 50% que le diste antes */
+    width: 50%; /* Ajusta el ancho al 50% que le diste antes */
     background-color: #f9f9f9; /* Fondo suave para el cuadro */
     border: 2px solid #ddd; /* Borde del cuadro */
     border-radius: 10px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-    overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede la altura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
 }
 
 .fixture-lista {
-    max-height: 100%; /* Se adapta al contenedor padre con scroll si es necesario */
+    width: 100%;             /* Ocupa el ancho completo del contenedor fixture */
 }
 
 .fixture h2 {
@@ -70,6 +70,23 @@
     margin: 0; /* Quitar márgenes de los párrafos */
 }
 
+.buscador {
+    display: flex;
+    flex-direction: column;  /* Coloca los selectores en columna */
+    gap: 10px;               /* Espacio entre los elementos */
+    margin-bottom: 20px;     /* Separación del fixture */
+}
+
+.buscador label {
+    font-weight: bold;       /* Resalta los labels */
+}
+
+.buscador select {
+    padding: 5px;
+    width: 200px;            /* Ancho ajustable de los selectores */
+}
+
+
 </style>
 <body>
     <header>
@@ -82,8 +99,10 @@
                 <li><a href="index.html">Valbé</a></li>
                 <li class="has-submenu"><a href="#estadisticas">Estadísticas</a>
                     <ul class="submenu">
-                        <li><a href="categoriaA.html" target="">Categoría "A"</a></li>
-                        <li><a href="categoriaB.html" target="">Categoría "B"</a></li> 
+                        <li><a href="categoriaA.html" target="">Categoría "A" - Fútbol 6</a></li>
+                        <li><a href="categoriaB.html" target="">Categoría "B" - Fútbol 6</a></li>
+                        <li><a href="categoriaA.html" target="">Categoría "A" - Fútbol 9</a></li>
+                        <li><a href="categoriaB.html" target="">Categoría "B" - Fútbol 9</a></li> 
                     </ul>
                 </li>
                 <li><a href="equipos.html">Equipos</a></li>
@@ -102,11 +121,13 @@
             <div class="buscador">
                 <label for="categoria">Buscar por categoría:</label>
                 <select id="categoria">
-                    <option value="categoria1">Categoría 1</option>
-                    <option value="categoria2">Categoría 2</option>
-                    <option value="categoria3">Categoría 3</option>
+                    <option value="categoria1">Categoría 1 - Fútbol 6</option>
+                    <option value="categoria2">Categoría 2 - Fútbol 6</option>
+                    <option value="categoria3">Categoría 1 - Fútbol 9</option>
+                    <option value="categoria3">Categoría 2 - Fútbol 9</option>
                 </select>
             </div>
+        
             <div class="fixture-lista">
                 <h2>Fecha 1</h2>
                 <div class="fixture-item">
@@ -135,47 +156,16 @@
                     </div>
                     <div class="equipo-right">Equipo F</div>
                 </div>
-
-                <div class="fixture-item">
-                    <div class="equipo-left">Equipo E</div>
-                    <div class="fixture-info">
-                        <p class="fecha-hora">13/09/2024 - 14:00</p>
-                        <p class="cancha">Cancha 3</p>
-                    </div>
-                    <div class="equipo-right">Equipo F</div>
-                </div>
-
-                <div class="fixture-item">
-                    <div class="equipo-left">Equipo E</div>
-                    <div class="fixture-info">
-                        <p class="fecha-hora">13/09/2024 - 14:00</p>
-                        <p class="cancha">Cancha 3</p>
-                    </div>
-                    <div class="equipo-right">Equipo F</div>
-                </div>
-
-                <div class="fixture-item">
-                    <div class="equipo-left">Equipo E</div>
-                    <div class="fixture-info">
-                        <p class="fecha-hora">13/09/2024 - 14:00</p>
-                        <p class="cancha">Cancha 3</p>
-                    </div>
-                    <div class="equipo-right">Equipo F</div>
-                </div>
-
-                <div class="fixture-item">
-                    <div class="equipo-left">Equipo E</div>
-                    <div class="fixture-info">
-                        <p class="fecha-hora">13/09/2024 - 14:00</p>
-                        <p class="cancha">Cancha 3</p>
-                    </div>
-                    <div class="equipo-right">Equipo F</div>
-                </div>      
+        
+                <!-- Resto de los fixtures -->
             </div>
-            
+        </div>
+        
         </div>
     </section>
+
     <h1 class="titulo_noticia">Noticias</h1>
+    <hr>
     <section class="noticias-seccion">
         <div class="noticias">
             <!-- Noticias (agrega contenido dinámico aquí) -->
