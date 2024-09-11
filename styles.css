@@ -32,7 +32,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -707,8 +707,9 @@ nav.scrolled {
 }
 
 .logo_principal, .fixture {
-    width: 40%; /* Ocupan el 50% cada uno */
-    height: 80vh;
+    width: 50%; /* Ocupan el 50% cada uno */
+    height: 500px;
+    
 }
 
 .logo_principal {
