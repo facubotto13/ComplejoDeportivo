@@ -7,34 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-header {
-  position: relative;
-  height: 14vh;
-  width: 100%;
-  background-size: cover;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
-}
-
 .equipos-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
     background-color: #e0e0e0; /* Fondo gris claro */
+    height: 80vh;
 }
 
 .titulo {
@@ -53,7 +32,6 @@ header {
     width: 100%; /* Asegura que el h1 ocupe el ancho total */
 }
 
-
 .equipo {
     text-align: center;
 }
@@ -68,18 +46,7 @@ header {
     margin-top: 10px;
 }
 
-main {
-    flex: 1;
-}
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-}
 
 </style>
 <body>
@@ -93,13 +60,12 @@ footer {
                 <li><a href="index.html">Valbé</a></li>
                 <li class="has-submenu"><a href="#estadisticas">Estadísticas</a>
                     <ul class="submenu">
-                        <li><a href="categoriaA.html" target="_blank">Categoría "A"</a></li>
-                        <li><a href="categoriaB.html" target="_blank">Categoría "B"</a></li>
+                        <li><a href="categoriaA.html" >Categoría "A"</a></li>
+                        <li><a href="categoriaB.html" >Categoría "B"</a></li>
                     </ul>
                 </li>
                 <li><a href="equipos.html">Equipos</a></li>
-                <li><a href="noticias.html" target="_blank">Noticias</a></li>
-                <li><a href="fotos.html" target="_blank">Fotos</a></li>
+                <li><a href="fotos.html" >Fotos</a></li>
                 <li><a href="reglamento.html">Reglamento</a></li>
             </ul>
         </nav>
@@ -199,8 +165,20 @@ footer {
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024</p>
+    <footer class="footer container" id="contacto">
+        <h2>Nuestras redes</h2>
+        <div class="linkredes">
+            <a href="#" class="ig" target="_blank"> <img src="imagenes/instagram_white_28dp.png" alt=""></a> 
+            <a href="#" class="fb" target="_blank"> <img src="imagenes/facebook_white_28dp.png" alt=""></a> 
+            <a href="#" class="twt" target="_blank"> <img src="imagenes/twitter_white_28dp.png" alt=""></a> 
+        </div>
+
+        <div class="footer-txt">
+            <p>
+                <hr>
+                Copyright 2024 © - SolBot - Diseño y Desarrollo Web
+            </p>
+        </div>
     </footer>
 </body>
 </html>

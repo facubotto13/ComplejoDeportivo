@@ -10,8 +10,8 @@ body {
 
 header {
     position: relative;
-    height: 100vh;
-    background: url('imagenes/fondo.png') no-repeat center top;
+    height: 14vh;
+    background-color: rgb(0, 0, 0);
     background-size: cover;
     display: flex;
     align-items: flex-start;
@@ -173,12 +173,7 @@ nav.scrolled {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.fixture {
-    width: 35%; /* Ajusta el ancho de la sección de fixture */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-}
+
 
 .buscador {
     margin-bottom: 20px;
@@ -196,36 +191,10 @@ nav.scrolled {
     border-radius: 4px;
 }
 
-.fixture-lista {
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
 
-.fixture-lista h2 {
-    font-size: 28px;
-    color: #333;
-    font-weight: bold;
-    background-color: #e0e0e0;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
 
-.fixture-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
+
+
 
 .equipo-left, .equipo-right {
     font-size: 20px;
@@ -732,3 +701,57 @@ nav.scrolled {
 #reglamento ul li {
     margin-bottom: 8px;
 }
+
+.logo_fixture {
+    display: flex; /* Activar el uso de Flexbox */
+}
+
+.logo_principal, .fixture {
+    width: 40%; /* Ocupan el 50% cada uno */
+    height: 80vh;
+}
+
+.logo_principal {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente el contenido (opcional) */
+    align-items: center; /* Centrar verticalmente el contenido (opcional) */
+}
+
+
+
+.fixture h2 {
+    text-align: center; /* Centrar el título */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.fixture-item {
+    display: flex;
+    justify-content: space-between; /* Distribuir los equipos a la izquierda y derecha */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Separador entre partidos */
+}
+
+.fixture-item:last-child {
+    border-bottom: none; /* Quitar el borde inferior del último elemento */
+}
+
+.equipo-left, .equipo-right {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.fixture-info {
+    text-align: center; /* Centrar la información del partido */
+    flex-grow: 1; /* Ocupar el espacio central */
+    font-size: 0.9em;
+    color: #666;
+}
+
+.fixture-info p {
+    margin: 0; /* Quitar márgenes de los párrafos */
+}
+
+
+

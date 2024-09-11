@@ -6,6 +6,71 @@
     <title>Complejo Valbé</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    .titulo_noticia{
+        display: block;
+        margin-top: 80px;
+        text-align: center;
+        font-size: 80px;
+    }
+
+    .fixture {
+    margin-top: 30px;
+    width: 59%; /* Ajusta el ancho al 50% que le diste antes */
+    background-color: #f9f9f9; /* Fondo suave para el cuadro */
+    border: 2px solid #ddd; /* Borde del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede la altura */
+}
+
+.fixture-lista {
+    max-height: 100%; /* Se adapta al contenedor padre con scroll si es necesario */
+}
+
+.fixture h2 {
+    text-align: center; /* Centrar el título */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.fixture-item {
+    display: flex;
+    justify-content: space-between; /* Distribuir los equipos a la izquierda y derecha */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Separador entre partidos */
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.fixture-item:last-child {
+    border-bottom: none; /* Quitar el borde inferior del último elemento */
+}
+
+.equipo-left, .equipo-right {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.fixture-info {
+    text-align: center; /* Centrar la información del partido */
+    flex-grow: 1; /* Ocupar el espacio central */
+    font-size: 0.9em;
+    color: #666;
+}
+
+.fixture-info p {
+    margin: 0; /* Quitar márgenes de los párrafos */
+}
+
+</style>
 <body>
     <header>
         <div class="overlay"></div>
@@ -22,31 +87,16 @@
                     </ul>
                 </li>
                 <li><a href="equipos.html">Equipos</a></li>
-                <li><a href="noticias.html" target="">Noticias</a></li>
+
                 <li><a href="fotos.html" target="">Fotos</a></li>
                 <li><a href="reglamento.html">Reglamento</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="noticias-seccion">
-        <div class="noticias">
-            <!-- Noticias (agrega contenido dinámico aquí) -->
-            <div class="noticia" onclick="openModal('modal1')">
-                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 1">
-                <h3>Título Noticia 1</h3>
-                <p>Resumen de la noticia 1...</p>
-            </div>
-            <div class="noticia" onclick="openModal('modal2')">
-                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 2">
-                <h3>Título Noticia 2</h3>
-                <p>Resumen de la noticia 2...</p>
-            </div>
-            <div class="noticia" onclick="openModal('modal3')">
-                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 3">
-                <h3>Título Noticia 3</h3>
-                <p>Resumen de la noticia 3...</p>
-            </div>
+    <section class="logo_fixture">
+        <div class="logo_principal">
+            <img class="logo_p" src="imagenes/Logo.jpg" alt="Logo del torneo">
         </div>
         <div class="fixture">
             <div class="buscador">
@@ -85,8 +135,65 @@
                     </div>
                     <div class="equipo-right">Equipo F</div>
                 </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>      
             </div>
             
+        </div>
+    </section>
+    <h1 class="titulo_noticia">Noticias</h1>
+    <section class="noticias-seccion">
+        <div class="noticias">
+            <!-- Noticias (agrega contenido dinámico aquí) -->
+            <div class="noticia" onclick="openModal('modal1')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 1">
+                <h3>Título Noticia 1</h3>
+                <p>Resumen de la noticia 1...</p>
+            </div>
+            <div class="noticia" onclick="openModal('modal2')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 2">
+                <h3>Título Noticia 2</h3>
+                <p>Resumen de la noticia 2...</p>
+            </div>
+            <div class="noticia" onclick="openModal('modal3')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 3">
+                <h3>Título Noticia 3</h3>
+                <p>Resumen de la noticia 3...</p>
+            </div>
         </div>
     </section>
 
