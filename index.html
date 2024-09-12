@@ -14,77 +14,6 @@
         font-size: 80px;
     }
 
-    .fixture {
-    margin-top: 30px;
-    width: 50%; /* Ajusta el ancho al 50% que le diste antes */
-    background-color: #f9f9f9; /* Fondo suave para el cuadro */
-    border: 2px solid #ddd; /* Borde del cuadro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-}
-
-.fixture-lista {
-    width: 100%;             /* Ocupa el ancho completo del contenedor fixture */
-}
-
-.fixture h2 {
-    text-align: center; /* Centrar el título */
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.fixture-item {
-    display: flex;
-    justify-content: space-between; /* Distribuir los equipos a la izquierda y derecha */
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd; /* Separador entre partidos */
-    align-items: center;
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.fixture-item:last-child {
-    border-bottom: none; /* Quitar el borde inferior del último elemento */
-}
-
-.equipo-left, .equipo-right {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.fixture-info {
-    text-align: center; /* Centrar la información del partido */
-    flex-grow: 1; /* Ocupar el espacio central */
-    font-size: 0.9em;
-    color: #666;
-}
-
-.fixture-info p {
-    margin: 0; /* Quitar márgenes de los párrafos */
-}
-
-.buscador {
-    display: flex;
-    flex-direction: column;  /* Coloca los selectores en columna */
-    gap: 10px;               /* Espacio entre los elementos */
-    margin-bottom: 20px;     /* Separación del fixture */
-}
-
-.buscador label {
-    font-weight: bold;       /* Resalta los labels */
-}
-
-.buscador select {
-    padding: 5px;
-    width: 200px;            /* Ancho ajustable de los selectores */
-}
 
 
 </style>
@@ -97,6 +26,7 @@
             </div>
             <ul class="menu">
                 <li><a href="index.html">Valbé</a></li>
+                <li><a href="index.html">Noticias</a></li>
                 <li class="has-submenu"><a href="#estadisticas">Estadísticas</a>
                     <ul class="submenu">
                         <li><a href="categoriaA.html" target="">Categoría "A" - Fútbol 6</a></li>
@@ -156,6 +86,51 @@
                     </div>
                     <div class="equipo-right">Equipo F</div>
                 </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
+
+                <div class="fixture-item">
+                    <div class="equipo-left">Equipo E</div>
+                    <div class="fixture-info">
+                        <p class="fecha-hora">13/09/2024 - 14:00</p>
+                        <p class="cancha">Cancha 3</p>
+                    </div>
+                    <div class="equipo-right">Equipo F</div>
+                </div>
         
                 <!-- Resto de los fixtures -->
             </div>
@@ -184,6 +159,11 @@
                 <h3>Título Noticia 3</h3>
                 <p>Resumen de la noticia 3...</p>
             </div>
+            <div class="noticia" onclick="openModal('modal4')">
+                <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 4">
+                <h3>Título Noticia 4</h3>
+                <p>Resumen de la noticia 4...</p>
+            </div>
         </div>
     </section>
 
@@ -210,6 +190,14 @@
             <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 3">
             <h3>Título Noticia 1</h3>
             <p>Detalle completo de la noticia 1...</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <img src="imagenes/Seleccion-de-futbol-de-Argentina-Logo.png" alt="Noticia 4">
+            <h3>Título Noticia 4</h3>
+            <p>Detalle completo de la noticia 4...</p>
         </div>
     </div>
     <!-- Agrega más modales según sea necesario -->
