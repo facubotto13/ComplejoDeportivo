@@ -7,42 +7,150 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-.equipos-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* Reset básico para margen y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Estilo para el header */
+header {
+    background: #333;
+    border-bottom: 2px solid #444;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #00bcd4; /* Color de acento al pasar el ratón */
+}
+
+.menu li:hover > .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+}
+
+.submenu li {
+    margin-bottom: 10px;
+}
+
+.submenu a {
+    color: #333;
+    font-weight: 400;
+}
+
+.submenu a:hover {
+    color: #00bcd4; /* Color de acento al pasar el ratón */
+}
+
+/* Estilo para el main */
+main {
+    margin-top: 80px; /* Asegura que el contenido no se oculte detrás del header */
     padding: 20px;
-    background-color: #e0e0e0; /* Fondo gris claro */
 }
 
 .titulo {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 20px;
-    padding: 20px;
-    background-color: #e0e0e0;
-    align-items: center;
-    justify-items: center; /* Centra el contenido dentro de las celdas */
+    background-color: #00bcd4; /* Color de fondo vibrante */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .titulo h1 {
-    grid-column: span 4; /* Ocupa las 4 columnas, centrando el h1 */
-    text-align: center;
-    width: 100%; /* Asegura que el h1 ocupe el ancho total */
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* Estilo para la sección de equipos */
+.equipos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    gap: 20px;
+    padding: 20px;
 }
 
 .equipo {
     text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.equipo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .equipo img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+    border: 2px solid #00bcd4; /* Borde alrededor de la imagen */
+    transition: border-color 0.3s;
+}
+
+.equipo img:hover {
+    border-color: #333; /* Cambia el borde al pasar el ratón */
 }
 
 .equipo p {
     margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 500;
 }
 
 </style>
@@ -177,6 +285,10 @@
             </p>
         </div>
     </footer>
+
+    <a href="https://wa.me/54" class="btn-wsp" target="_blank">
+        <img src="imagenes/wpp.webp" alt="WhatsApp">
+    </a>
     <script>
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
