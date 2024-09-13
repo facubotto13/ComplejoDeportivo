@@ -777,10 +777,34 @@ nav.scrolled {
 }
 
 
-.hr {
-    width: 90%; /* Ocupa el 90% del ancho */
+hr {
+    width: 85%; /* Ocupa el 90% del ancho */
     margin: 0 auto; /* Centra la línea horizontal */
     border: 1px solid #000; /* Define el color y grosor de la línea */
 }
+
+#toggle-ver {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+#toggle-ver:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón */
+}
+
+#toggle-ver:active {
+    transform: scale(0.95); /* Reducir ligeramente el tamaño al hacer clic */
+}
+
 
 
